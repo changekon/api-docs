@@ -25,6 +25,7 @@ Table of Contents :
   - [HTTP Return Codes](#http-return-codes)
 - [Public API Endpoints](#public-api-endpoints)
   - [Check server time](#check-server-time)
+  - [Market prices](#market-prices)
 - [USER API](#user-api)
   - [Profile](#profile)
   - [My Trades](#mytrades)
@@ -170,6 +171,31 @@ NONE
 {
   "serverTime": 1577168266421
 }
+```
+
+## Market prices
+
+Shows the best current order in each market
+
+**Url :**
+https://changekon.com/api/v1/market/prices
+
+```
+GET /api/v1/market/prices
+```
+**Parameters:**
+NONE
+
+
+**Response:**
+```javascript
+  [
+   {"market":"BTC_TMN","prices":{"buy":"192,949,328","sell":"195,571,152"},"24h%":"0.4"},
+   {"market":"BTC_USDT","prices":{"buy":"9,031.34","sell":"9,147.95"},"24h%":"0.5"},
+   {"market":"ETH_TMN","prices":{"buy":"4,788,118","sell":"4,839,234"},"24h%":"-0.6"},
+   {"market":"ETH_USDT","prices":{"buy":"224.28","sell":"226.69"},"24h%":"0.6"},
+   {"market":"USDT_TMN","prices":{"buy":"21,176","sell":"21,668"},"24h%":"-0.4"}
+ ]
 ```
 
 # USER API
